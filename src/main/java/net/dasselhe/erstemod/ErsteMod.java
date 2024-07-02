@@ -1,6 +1,7 @@
 package net.dasselhe.erstemod;
 
 import com.mojang.logging.LogUtils;
+import net.dasselhe.erstemod.items.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -28,6 +29,7 @@ public class ErsteMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
